@@ -7,9 +7,12 @@ export const MUSICBRAINZ_SEARCH_CHANGE = "MUSICBRAINZ_SEARCH_CHANGE"
 export const MUSICBRAINZ_SEARCH_RESULTS_CHANGE = "MUSICBRAINZ_SEARCH_RESULTS_CHANGE"
 export const REMOVE_FAVOURITE = "REMOVE_FAVOURITE"
 
-export const removeFavourite = (id, type) => ({
-    type: REMOVE_FAVOURITE, data: { id, itemType: type }
-})
+export function removeFavourite(id, type) {
+    return {
+        type: REMOVE_FAVOURITE,
+        data: { id, itemType: type }
+    }
+}
 
 export function searchChange(data) {
     return {
